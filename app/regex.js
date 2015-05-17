@@ -27,9 +27,10 @@ exports.regexAnswers = {
   },
 
   matchesPattern : function(str) {
-
+    var results = /^\d{3}-\d{3}-\d{4}$/.test(str);
+    return results;
   },
   isUSD : function(str) {
-
+    var results = /^$ /.test(str);
   }
 };
