@@ -31,6 +31,7 @@ exports.regexAnswers = {
     return results;
   },
   isUSD : function(str) {
-    var results = /^$ /.test(str);
+    var results = /^\$\d{1,3}(,\d{3})*(\.\d{2})?$/.test(str);
+    return results;
   }
 };
