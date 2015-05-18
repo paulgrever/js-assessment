@@ -10,7 +10,10 @@ exports.functionsAnswers = {
   },
 
   functionFunction : function(str) {
-    
+    var results =  function(params){
+      return str + ', ' + params;
+    };
+    return results;
   },
 
   makeClosures : function(arr, fn) {
@@ -18,7 +21,9 @@ exports.functionsAnswers = {
   },
 
   partial : function(fn, str1, str2) {
-
+    return function(str3) {
+      return fn.call(null, str1, str2, str3);
+    };
   },
 
   useArguments : function() {
